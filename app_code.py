@@ -200,7 +200,7 @@ def get_vectorstore(chunks, metas):
     return FAISS.from_texts(texts=chunks, embedding=emb, metadatas=metas)
 
 def ask_question(vs, question):
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0)
     docs = vs.similarity_search(question, k=4)
     context = "\n\n".join([d.page_content for d in docs])
     seen, citations = set(), []
@@ -222,7 +222,7 @@ Answer:"""
     return answer
 
 def summarize_all(vs):
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0)
     docs = vs.similarity_search("summary overview key points conclusions", k=8)
     context = "\n\n".join([d.page_content for d in docs])
     return llm.invoke(f"Write a comprehensive, well-structured summary of this content:\n\n{context}").content
