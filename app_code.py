@@ -161,7 +161,6 @@ section[data-testid="stSidebar"] {
 
 #MainMenu,footer,header{visibility:hidden}
 .stDeployButton{display:none}
-</style>
 """, unsafe_allow_html=True)
 
 # ── IMPORTS ───────────────────────────────────────────────────────────────────
