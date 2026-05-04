@@ -68,14 +68,14 @@ streamlit run app.py
 
 ##  Product Roadmap
 
-- [x] PDF support with source citations
-- [x] Word + TXT file support
-- [x] Document summarization
-- [x] Conversation memory
-- [ ] Local LLM via Ollama (privacy mode)
-- [ ] Export chat history as PDF
-- [ ] Table/chart extraction from PDFs
-- [ ] Multi-language support
+-  PDF support with source citations
+-  Word + TXT file support
+-  Document summarization
+-  Conversation memory
+-  Local LLM via Ollama (privacy mode)
+-  Export chat history as PDF
+-  Table/chart extraction from PDFs
+-  Multi-language support
 
 ---
 
