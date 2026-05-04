@@ -319,8 +319,14 @@ with col1:
             st.warning("Enter API key first.")
         elif st.session_state.vectorstore:
             set_api_key(st.session_state.api_key)
-            with st.spinner("Generating summary..."):
-                summary = summarize_all(st.session_state.vectorstore)
+            with with st.spinner("Generating summary..."):
+    try:
+        summary = summarize_all(st.session_state.vectorstore)
+    except Exception as e:
+        if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+            summary = "⚠️ **API Rate Limit Hit** — Please wait 1 minute and try again."
+        else:
+            summary = f"⚠️ **Error:** {str(e)}"
             st.session_state.chat_history.append({"role": "user", "content": "Summarize all documents"})
             st.session_state.chat_history.append({"role": "bot", "content": summary})
             st.rerun()
@@ -338,8 +344,14 @@ if user_question:
         st.warning("Enter API key in sidebar first.")
     elif st.session_state.vectorstore:
         set_api_key(st.session_state.api_key)
-        with st.spinner("Analyzing..."):
-            answer = ask_question(st.session_state.vectorstore, user_question)
+        with with st.spinner("Analyzing..."):
+    try:
+        answer = ask_question(st.session_state.vectorstore, user_question)
+    except Exception as e:
+        if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+            answer = "⚠️ **API Rate Limit Hit** — You've exceeded your free Gemini API quota. Please wait 1 minute and try again, or get a new API key at [aistudio.google.com](https://aistudio.google.com)"
+        else:
+            answer = f"⚠️ **Error:** {str(e)}"
         st.session_state.chat_history.append({"role": "user", "content": user_question})
         st.session_state.chat_history.append({"role": "bot", "content": answer})
         st.rerun()
