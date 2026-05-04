@@ -144,23 +144,8 @@ section[data-testid="stSidebar"] * { color:#FAF7F0 !important; }
 .swarn { font-size:0.72rem; color:#C9A84C !important; font-family:'Orbitron',monospace; letter-spacing:0.08em; }
 
 #MainMenu,footer,header{visibility:hidden}
-section[data-testid="stSidebar"] {
-    transform: none !important;
-    display: block !important;
-}
-[data-testid="collapsedControl"] {
-    display: none !important;
-}
-
-@media (max-width: 768px) {
-    .hero-title { font-size: 1.8rem !important; letter-spacing: 2px !important; }
-    .hero-sub { font-size: 0.7rem !important; }
-    .bubble-user, .bubble-bot { max-width: 90% !important; }
-    .hero-badge { font-size: 0.55rem !important; }
-}
-
-#MainMenu,footer,header{visibility:hidden}
 .stDeployButton{display:none}
+</style>
 """, unsafe_allow_html=True)
 
 # ── IMPORTS ───────────────────────────────────────────────────────────────────
