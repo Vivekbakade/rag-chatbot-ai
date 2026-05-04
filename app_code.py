@@ -319,7 +319,7 @@ with col1:
             st.warning("Enter API key first.")
         elif st.session_state.vectorstore:
             set_api_key(st.session_state.api_key)
-            with with st.spinner("Generating summary..."):
+            with st.spinner("Generating summary..."):
     try:
         summary = summarize_all(st.session_state.vectorstore)
     except Exception as e:
