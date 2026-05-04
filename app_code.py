@@ -320,7 +320,7 @@ with col1:
         elif st.session_state.vectorstore:
             set_api_key(st.session_state.api_key)
             with st.spinner("Generating summary..."):
-    try:
+        try:
         summary = summarize_all(st.session_state.vectorstore)
     except Exception as e:
         if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
