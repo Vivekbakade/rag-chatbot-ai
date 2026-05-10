@@ -1,6 +1,6 @@
 #  DocChat AI — RAG-Based Document Q&A Chatbot
 
-> Built by **Vivek Bakade** | [vivekbakade14@gmail.com](mailto:vivekbakade14@gmail.com) | [LinkedIn](https://linkedin.com/in/vivek-bakade-a2726224b) | [GitHub](https://github.com/Vivekbakade)
+> Built by Vivek Bakade | [vivekbakade14@gmail.com](mailto:vivekbakade14@gmail.com) | [LinkedIn](https://linkedin.com/in/vivek-bakade-a2726224b) |
 
 ---
 
@@ -16,7 +16,6 @@
 
 ### Success Metrics
 | Metric | Target |
-|---|---|
 | Query response time | < 5 seconds |
 | Answer relevance (user rating) | > 80% helpful |
 | Supported file types | PDF, DOCX, TXT |
@@ -27,7 +26,6 @@
 ##  Features (Beyond Basic Tutorial)
 
 | Feature | Description |
-|---|---|
 | **Source Citations** | Every answer shows exact filename + page number |
 | **Multi-format Support** | PDF, Word (.docx), and Text (.txt) files |
 | **Summarize All Docs** | One-click summary of all uploaded documents |
@@ -77,6 +75,6 @@ streamlit run app.py
 -  Table/chart extraction from PDFs
 -  Multi-language support
 
----
+---](https://github.com/Vivekbakade/rag-chatbot-ai)
 
 
